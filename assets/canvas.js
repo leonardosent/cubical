@@ -1,7 +1,7 @@
 function start() {
     document.getElementById("start").remove();
     document.getElementById("hr").remove();
-    document.getElementsById("title").remove();
+    document.getElementById("title").remove();
     console.log("Getting Context...");
     // const pen = NaN;
     const canvas = document.getElementById("canvas");
