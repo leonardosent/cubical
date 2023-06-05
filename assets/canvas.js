@@ -35,13 +35,13 @@ function render(pen, canvas, playerX, playerY, enemyX, enemyY) {
                         playerX -= 5;
                     // } while (pressedKey.key == "ArrowLeft");
                 }
-            } if (playerY + 15 < canvas.height) {
+            } if (playerY - 15 < canvas.height) {
                 if (pressedKey.key == "ArrowUp" || pressedKey.key == "w") {
                     // do {
                         playerY -= 5;
                     // } while (pressedKey.key == "ArrowUp");
                 }
-            } if (playerY - 15 > 0) {
+            } if (playerY + 15 > 0) {
                 if (pressedKey.key == "ArrowDown" || pressedKey.key == "s") {
                     // do {
                         playerY += 5;
