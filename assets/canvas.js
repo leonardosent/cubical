@@ -18,9 +18,9 @@ function start() {
 
 function render(pen, canvas, playerX, playerY, enemyX, enemyY) {
     pen.font = "10px Arial";
-    pen.fillText("Press any key to start.", canvas.width/2 - 50, canvas.height/2 + 15);
-    pen.fillText("Use arrow keys or WASD to control the player", canvas.width/2 - 30, canvas.height/2);
+    pen.fillText("Use arrow keys or WASD to control the player", canvas.width/2 - 80, canvas.height/2 + 15);
     pen.fillText("Run away from the enemy!", canvas.width/2 - 50, canvas.height/2 - 15);
+    pen.fillText("Press any key to start.", canvas.width/2 - 50, canvas.height/2);
         window.addEventListener('keydown', function (pressedKey) {
         //   document.querySelector('p').innerHTML = `You pressed ${pressedKey.key}`;
             if (playerX + 15 < canvas.width) {
