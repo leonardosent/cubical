@@ -18,30 +18,30 @@ function start() {
 
 function render(pen, canvas, playerX, playerY, enemyX, enemyY) {
     pen.font = "10px Arial";
-    pen.fillText("Press any key to start.", canvas.width/2 - 40, canvas.height/2);
-    pen.fillText("Use arrow keys or WASD to control the player", canvas.width/2 - 50, canvas.height/2);
-    pen.fillText("Run away from the enemy!", canvas.width/2 - 60, canvas.height/2);
+    pen.fillText("Press any key to start.", canvas.width/2 - 50, canvas.height/2 + 15);
+    pen.fillText("Use arrow keys or WASD to control the player", canvas.width/2 - 30, canvas.height/2);
+    pen.fillText("Run away from the enemy!", canvas.width/2 - 50, canvas.height/2 - 15);
         window.addEventListener('keydown', function (pressedKey) {
         //   document.querySelector('p').innerHTML = `You pressed ${pressedKey.key}`;
-            if (playerX - 15 < canvas.width) {
+            if (playerX + 15 < canvas.width) {
                 if (pressedKey.key == "ArrowRight" || pressedKey.key == "d") {
                     // do {
                         playerX += 5;
                     // } while (pressedKey.key == "ArrowRight");
                 }
-            } if (playerX + 15 > 0) {
+            } if (playerX - 15 > 0) {
                 if (pressedKey.key == "ArrowLeft" || pressedKey.key == "a") {
                     // do {
                         playerX -= 5;
                     // } while (pressedKey.key == "ArrowLeft");
                 }
-            } if (playerY - 15 < canvas.height) {
+            } if (playerY - 15 < 0) {
                 if (pressedKey.key == "ArrowUp" || pressedKey.key == "w") {
                     // do {
                         playerY -= 5;
                     // } while (pressedKey.key == "ArrowUp");
                 }
-            } if (playerY + 15 > 0) {
+            } if (playerY + 15 > canvas.height) {
                 if (pressedKey.key == "ArrowDown" || pressedKey.key == "s") {
                     // do {
                         playerY += 5;
